@@ -1,101 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <meta charset="utf-8">
-        <title>Sang Tran Official Website</title>
-
 <style>
-.title{
-  color:rgb(52,56,56);
-  margin:12px;
-  font-family:Times New Roman;
-  font-weight: bold;
-  font-size:60px;
-  padding-left:12px;
-  padding-top:15px;
-}
-p#introduce{
-  font-size:1.17em;
-  font-family:serif;
-  padding-left:12px;
-  background-color:transparent;
-}
-#about{
-  color:rgb(83, 128, 153);
-  border-top:3px solid darkblue;
-  margin:12px;
-  padding-top:30px;
-  font-family:Times New Roman;
-  font-weight: bold;
-  padding-left:40px;
-}
-#introduce{
-  background-color:rgb(255, 255, 255);
-  margin-top:110px;
-  width:59%;
-  overflow-y:auto;
-  overflow-x:hidden;
-  border-right:3px solid darkblue;
-  font-family:Times New Roman;
-}
-#picSang{
-  margin-left: 31px;
-  float:left;
-  width:16%;
-  padding-left:20px;
-}
-h1{
-  font-size:50px;
-}
-h4.title{
-  font-size:1.2em;
-}
-.contacts{
-  float-top:10px;
-  height:20px;
-  float:right;
-  color:white;
-}
-.container{
-  font-weight:bold;
-  margin-top:100px;
-  font-family: 'Open Sans', sans-serif;
-}
-a:hover{
-background-color: rgb(217, 229, 255);
-}
-
-a:active{
-color: rgb(122, 163, 255);
-}
-
-a:focus{
-background-color: rgb(92, 124, 196);
-}
-.container .row .col-sm-3{
-  padding-top:25px;
-  padding-bottom:15px;
-}
-.container div:nth-child(1){
-  color:#000;
-  font-size:20px;
-}
-.container div:nth-child(2){
-  color:#ccc;
-  font-size:25px
-}
-#factspic{
-  margin-top:12px;
-  width:15%;
-}
-#factspicage{
-  margin-top:12px;
-  width:15%;
-}
-body{
-background: url(https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=067f0b097deff88a789e125210406ffe); background-size: 100% 100%;        
-}
-@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+	@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 body {
   font-family: Open Sans, "Helvetica Neue", "Helvetica", Helvetica, Arial,   sans-serif;
   font-size: 13px;
@@ -335,19 +239,48 @@ footer p strong {
 }
 
 
+</style>
 
-       
-        </style>
-<link rel="shortcut icon" href="https://cdn.dribbble.com/users/2790/screenshots/1716776/st.png">
- 
-</head>
-<body>
+<script>
 
-<!About Me-->
-<h1 class="title">Sang Tran</h1>
-<h4 class="title">Newton, Massachusetts</h4>
-<h2 id="about"><u>About Me</u></h2>
-<div id="picSang"><img src="https://lh3.googleusercontent.com/ZNi8A6OO2pqsskyU5ZXW-QngaV72zkmZXngRg0-RXpgYIOFGvGnfJF0MctpOeaRfbb57-r6fQdV2V4nrkn3TR-MohGTC2T7YyjvbgqtqAV1utJ5WI-Wu=w1280" alt="Picture of Sang Tran" width="178" height="315"></div><p id="introduce">My name is Sang Tran and I am a going to be high school student. I was borned and rasied in Hanoi, Vietnam. Vietnam is a Southeastern Asian country known for its pagodas, bays, and beaches. The last school I attended was Concordia International School Hanoi, coming here. My hobbies includes traveling, playing soccer, and graphic designs. I am also intending to join Drafting or Design &amp; Visual Communications in the future. On the summer of 2020, I decided to try out JavaScript and HTML on Khan Academy. This was my first HTML Webpage I've made. I really enjoyed making this and this could easily be my new hobby!</p><table id="table" style="float: right">
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    100,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+
+
+$('#number1').jQuerySimpleCounter({end: 12,duration: 3000});
+$('#number2').jQuerySimpleCounter({end: 55,duration: 3000});
+$('#number3').jQuerySimpleCounter({end: 359,duration: 2000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
+
+
+
+  	/* AUTHOR LINK */
+     $('.about-me-img').hover(function(){
+            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+        }, function(){
+            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+        });
+  	
+</script>
 
 <div class="sectiontitle">
     <h2>Projects statistics</h2>
@@ -398,56 +331,3 @@ footer p strong {
         </div>
     </div>
 </footer>
-
-<script>
-$.fn.jQuerySimpleCounter = function( options ) {
-	    var settings = $.extend({
-	        start:  0,
-	        end:    100,
-	        easing: 'swing',
-	        duration: 400,
-	        complete: ''
-	    }, options );
-
-	    var thisElement = $(this);
-
-	    $({count: settings.start}).animate({count: settings.end}, {
-			duration: settings.duration,
-			easing: settings.easing,
-			step: function() {
-				var mathCount = Math.ceil(this.count);
-				thisElement.text(mathCount);
-		},
-	complete: settings.complete
-	});
-};
-
-
-$('#number1').jQuerySimpleCounter({end: 12,duration: 3000});
-$('#number2').jQuerySimpleCounter({end: 55,duration: 3000});
-$('#number3').jQuerySimpleCounter({end: 359,duration: 2000});
-$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
-</script>
-
-
-<!--Contacts Table-->
-<thead>
-<tr>
-<th><u><center>Contacts</center></u></th>
-</tr>
-<tr>
-<th><a class="contacts" target="YouTube Channel" href="https://www.youtube.com/channel/UCitlYMOhpxPcGudoLqTaUVA?view_as=subscriber">My YouTube Channel
-<img class="contacts" src="https://logodix.com/logo/360198.png" alt="Youtube Logo">
-</a></th>
-</tr>
-<tr>
-<th><class="contacts">tranvinhsang06@gmail.com<img class="contacts" src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="Gmail Logo">
-</class="contacts"></th>
-</tr>
-
-
-</thead>
-</table>
-</div>
-</body>
-</html>
